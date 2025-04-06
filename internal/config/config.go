@@ -1,5 +1,6 @@
 // SPDX-FileCopyrightText: 2025 Paulo Almeida <almeidapaulopt@gmail.com>
 // SPDX-License-Identifier: MIT
+// Commenting just to trigger workflow
 
 package config
 
