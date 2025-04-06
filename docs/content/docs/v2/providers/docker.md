@@ -182,7 +182,7 @@ docker secrets.
 ```yaml
 labels:
   tsdproxy.enable: "true"
-  tsdproxy.authkey: "/run/secrets/authkey"
+  tsdproxy.authkeyfile: "/run/secrets/authkey"
 ```
 
 {{% /details %}}
