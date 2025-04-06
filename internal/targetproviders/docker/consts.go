@@ -24,6 +24,8 @@ const (
 	LabelTsnetVerbose = LabelPrefix + "tsnet_verbose"
 	LabelAuthKey      = LabelPrefix + "authkey"
 	LabelAuthKeyFile  = LabelPrefix + "authkeyfile"
+	LabelClientId     = LabelPrefix + "clientid"
+	LabelClientSecret = LabelPrefix + "clientsecret"
 	LabelAutoDetect   = LabelPrefix + "autodetect"
 	LabelTags         = LabelPrefix + "tags"
 	// Legacy

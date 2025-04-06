@@ -228,6 +228,9 @@ func (c *container) getTailscaleConfig() (*model.Tailscale, error) {
 	c.log.Trace().Msg("getTailscaleConfig")
 	defer c.log.Trace().Msg("End getTailscaleConfig")
 
+	clientId := c.getLabelString(LabelClientId, "")
+	clientSecret := c.getLabelString(LabelClientSecret, "")
+
 	authKey := c.getLabelString(LabelAuthKey, "")
 
 	authKey, err := c.getAuthKeyFromAuthFile(authKey)
@@ -241,6 +244,8 @@ func (c *container) getTailscaleConfig() (*model.Tailscale, error) {
 		Ephemeral:    c.getLabelBool(LabelEphemeral, model.DefaultTailscaleEphemeral),
 		RunWebClient: c.getLabelBool(LabelRunWebClient, model.DefaultTailscaleRunWebClient),
 		Verbose:      c.getLabelBool(LabelTsnetVerbose, model.DefaultTailscaleVerbose),
+		ClientID:     clientId,
+		ClientSecret: clientSecret,
 		AuthKey:      authKey,
 		Tags:         tags,
 	}, nil

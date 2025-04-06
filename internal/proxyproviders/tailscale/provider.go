@@ -106,6 +106,13 @@ func (c *Client) getControlURL() string {
 
 func (c *Client) getAuthkey(config *model.Config, path string) string {
 	authKey := config.Tailscale.AuthKey
+	clientId := config.Tailscale.ClientID
+	clientSecret := config.Tailscale.ClientSecret
+
+	if clientId != "" && clientSecret != "" {
+		c.clientID = clientId
+		c.clientSecret = clientSecret
+	}
 
 	if c.clientID != "" && c.clientSecret != "" {
 		authKey = c.getOAuth(config, path)

@@ -25,6 +25,8 @@ type (
 	// Tailscale struct stores the configuration for tailscale ProxyProvider
 	Tailscale struct {
 		Tags         string `yaml:"tags"`
+		ClientID     string
+		ClientSecret string
 		AuthKey      string `yaml:"authKey"`
 		Ephemeral    bool   `default:"false" validate:"boolean" yaml:"ephemeral"`
 		RunWebClient bool   `default:"false" validate:"boolean" yaml:"runWebClient"`
