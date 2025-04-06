@@ -6,8 +6,8 @@ version: 2
 env:
   - GO111MODULE=on
   - CGO_ENABLED=0
-  - GITHUB_ORG=almeidapaulopt
-  - DOCKER_ORG=almeidapaulopt
+  - GITHUB_ORG=bessex
+  - DOCKER_ORG=bessex
   - DOCKERFILE=Dockerfile.goreleaser
   - LATEST={{if or .Prerelease .IsDraft .IsSnapshot .IsNightly .IsSingleTarget }}next{{else}}latest{{ end }}
 
